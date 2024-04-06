@@ -1,14 +1,15 @@
-.main {
+.not-found {
     text-align: center;
     font-family: 'Ownglyph_meetme-Rg';
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;;
+    min-height: 100vh;
+    color: #4C290E;
 }
 
-.main img{
+.image{
     width: 100vh;
 }
 
