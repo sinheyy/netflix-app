@@ -1,0 +1,33 @@
+#navbar {
+    background-color: #FAF5ED !important;
+    font-family: 'SUITE-Regular';
+    font-size: 1.5rem;
+}
+
+#button{
+    background-color: #D81F26;
+    color: white;
+}
+
+.search-box{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #D81F26;
+    border-radius: 0px;
+    outline: none;
+}
+
+.search-box :focus{
+    outline: none;
+}
+
+.search-box :hover{
+    outline: none;
+}
+
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
