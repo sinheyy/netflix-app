@@ -8,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Outlet } from 'react-router-dom';
 import './AppLayout.style.css';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 const AppLayout = () => {
     const navigate = useNavigate();
@@ -17,7 +19,7 @@ const AppLayout = () => {
             <Navbar id="navbar" expand="lg" className="bg-body-tertiary">
                 <Container fluid>
                     <Navbar.Brand href="#" onClick={() => navigate("/")}>
-                        <img width={200} src="/siya_logo.png"></img>
+                        <img width={150} src="/siya_logo.png"></img>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
@@ -38,7 +40,9 @@ const AppLayout = () => {
                                 className="search-box"
                                 aria-label="Search"
                             />
-                            <Button id="button" variant="none">Search</Button>
+                            <Button id="button" variant="none">
+                                <FontAwesomeIcon icon={faMagnifyingGlass} style={{ color: "#ffffff", }} />
+                            </Button>
                         </Form>
                     </Navbar.Collapse>
                 </Container>

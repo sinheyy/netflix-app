@@ -1,7 +1,7 @@
 #navbar {
     background-color: #DBDBDB !important;
     font-family: 'SUITE-Regular';
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 #navbar-menu :hover {
@@ -11,13 +11,13 @@
 #button {
     background-color: #85C7F2;
     color: white;
+    border-radius: 10px;
 }
 
 .search-box {
-    background-color: transparent;
+    background-color: hsla(360, 100%, 100%, 0.7);
     border: none;
-    border-bottom: 2px solid #85C7F2;
-    border-radius: 0px;
+    border-radius: 10px;
     outline: none;
 }
 
