@@ -1,28 +1,33 @@
 #navbar {
-    background-color: #FAF5ED !important;
+    background-color: #DBDBDB !important;
     font-family: 'SUITE-Regular';
     font-size: 1.5rem;
 }
 
-#button{
-    background-color: #D81F26;
+#navbar-menu :hover {
+    color: #85C7F2;
+}
+
+#button {
+    background-color: #85C7F2;
     color: white;
 }
 
-.search-box{
+.search-box {
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid #D81F26;
+    border-bottom: 2px solid #85C7F2;
     border-radius: 0px;
     outline: none;
 }
 
-.search-box :focus{
+.search-box :focus {
     outline: none;
 }
 
-.search-box :hover{
+.search-box :hover {
     outline: none;
+    color: #4C4C4C;
 }
 
 @font-face {

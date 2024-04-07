@@ -17,11 +17,12 @@ const AppLayout = () => {
             <Navbar id="navbar" expand="lg" className="bg-body-tertiary">
                 <Container fluid>
                     <Navbar.Brand href="#" onClick={() => navigate("/")}>
-                        <img width={150} src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Netflix-Logo.png"></img>
+                        <img width={200} src="/siya_logo.png"></img>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
+                            id="navbar-menu"
                             className="me-auto my-2 my-lg-0"
                             style={{ maxHeight: '100px' }}
                             navbarScroll

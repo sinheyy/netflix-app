@@ -8,7 +8,7 @@ const NotFoundPage = () => {
     return (
         <div className='not-found'>
             <div onClick={() => navigate("/")}>
-                <img width={100} src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Netflix-Logo.png"></img>
+                <img width={200} src="siya_logo.png"></img>
             </div>
 
             <h1>이 페이지는 존재하지 않습니다. url 확인부탁드립니다. 🥹🐾</h1>
