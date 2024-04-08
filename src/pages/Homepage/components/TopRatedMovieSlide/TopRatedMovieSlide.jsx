@@ -1,14 +1,14 @@
 import React from 'react'
-import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies'
 import 'react-multi-carousel/lib/styles.css';
 import BarLoader from "react-spinners/BarLoader";
 import Alert from 'react-bootstrap/Alert';
-import "./PopularMovieSlide.style.css"
+import "./TopRatedMovieSlide.style.css"
 import MovieSlider from '../../../../common/MovieSlider/MovieSlider';
 import { responsive } from '../../../../constants/responsive';
+import { useTopRatedMoviesQuery } from '../../../../hooks/useTopRatedMovies';
 
-const PopularMovieSlide = () => {
-    const { data, isLoading, isError, error } = usePopularMoviesQuery()
+const TopRatedMovieSlide = () => {
+    const { data, isLoading, isError, error } = useTopRatedMoviesQuery()
 
     if (isLoading) {
         return (<div className="loader" style={{ margin: 10 }}>
@@ -28,9 +28,9 @@ const PopularMovieSlide = () => {
 
     return (
         <div>
-            <MovieSlider title="Popular Movies" movies={data.results} responsive={responsive} />
+            <MovieSlider title="Top Rated Movies" movies={data.results} responsive={responsive} />
         </div>
     )
 }
 
-export default PopularMovieSlide
+export default TopRatedMovieSlide
