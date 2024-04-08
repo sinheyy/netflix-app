@@ -27,6 +27,16 @@
     justify-content: center;
 }
 
+@media only screen and (max-width: 768px) {
+    .footer ul {
+        flex-direction: column;
+    }
+
+    .footer-text {
+        font-size: 0.8rem;
+    }
+}
+
 @font-face {
     font-family: 'Chosunilbo_myungjo';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
