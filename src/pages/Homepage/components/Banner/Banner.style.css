@@ -42,6 +42,34 @@
     color: #4C4C4C;
 }
 
+@media only screen and (max-width: 768px) {
+    .banner {
+        height: 56vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .banner:before {
+        content: '';
+        background: linear-gradient(to top, #DBDBDB, transparent);
+        position: absolute;
+        left: 0;
+        height: 56vh;
+        width: 100%;
+    }
+
+    .banner-text-area {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 2rem;
+        font-family: 'SUITE-Regular';
+    }
+}
+
 @font-face {
     font-family: 'SUITE-Regular';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
