@@ -3,8 +3,25 @@ import Badge from 'react-bootstrap/Badge';
 import './MovieCard.style.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckToSlot, faFireFlameCurved } from '@fortawesome/free-solid-svg-icons'
+import { useMovieGenreQuery } from '../../hooks/useMovieGenre';
 
 const MovieCard = ({ movie }) => {
+    const { data: genreData } = useMovieGenreQuery()
+    //console.log("genre", genreData)
+
+    // genre id를 받아서 genre를 반환
+    const showGenre = (genreIdList) => {
+        if (!genreData) return []   // genreData가 비어 있을 경우 빈 배열 반환 - 아무것도 안 띄우기
+
+        // 이름만 모이게 됨
+        const genreNameList = genreIdList.map((id) => {
+            const genreObj = genreData.find((genre) => genre.id === id);
+            return genreObj.name;
+        })
+
+        return genreNameList
+    }
+
     return (
         <div
             style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.poster_path})` }}
@@ -12,9 +29,9 @@ const MovieCard = ({ movie }) => {
         >
             <div className='overlay'>
                 <h1 className='movie-title'>{movie?.title}</h1>
-                <div className='movie-release' style={{marginBottom:15}}>({movie?.release_date})</div>
+                <div className='movie-release' style={{ marginBottom: 15 }}>({movie?.release_date})</div>
                 <div style={{ marginBottom: 15 }}>
-                    {movie?.genre_ids.map((id) => (
+                    {showGenre(movie?.genre_ids).map((id) => (
                         <Badge className='movie-genre'>
                             {id}
                         </Badge>
