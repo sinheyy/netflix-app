@@ -9,7 +9,7 @@ const Banner = () => {
     console.log("Ddd", data);
 
     if (isLoading) {
-        return (<div className="bar-loader">
+        return (<div className="loader">
             <ClipLoader color="#85C7F2" loading={isLoading} size={150} />
         </div>
         );

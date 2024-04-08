@@ -1,4 +1,4 @@
-.bar-loader {
+.loader {
     display: flex;
     justify-content: center;
 }
@@ -12,7 +12,7 @@
 
 .banner:before {
     content: '';
-    background: linear-gradient(to top, #DBDBDB, transparent);
+    background: linear-gradient(to top, #2E2E2E, transparent);
     position: absolute;
     left: 0;
     height: 56vh;
@@ -35,30 +35,16 @@
 
 .banner-text-title {
     font-family: 'Diphylleia-Regular';
-    color: #2E2E2E;
+    color: white;
+    text-shadow: 1px 1px 2px #2E2E2E;
 }
 
 .banner-text-overview {
-    color: #4C4C4C;
+    color: #DBDBDB;
+    text-shadow: 1px 1px 1px #2E2E2E;
 }
 
 @media only screen and (max-width: 768px) {
-    .banner {
-        height: 56vh;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    .banner:before {
-        content: '';
-        background: linear-gradient(to top, #DBDBDB, transparent);
-        position: absolute;
-        left: 0;
-        height: 56vh;
-        width: 100%;
-    }
-
     .banner-text-area {
         width: 80%;
         display: flex;

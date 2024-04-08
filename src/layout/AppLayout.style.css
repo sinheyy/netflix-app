@@ -1,11 +1,19 @@
 #navbar {
-    background-color: #DBDBDB !important;
+    background-color: #2E2E2E !important;
     font-family: 'SUITE-Regular';
     font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#navbar-menu .nav-link {
+    color: white;
+    transition: text-decoration-color 0.5ms;
+    text-decoration: underline rgba(133, 199, 242, 0);
 }
 
 #navbar-menu :hover {
     color: #85C7F2;
+    text-decoration-color: rgba(133, 199, 242, 1);
 }
 
 #button {
@@ -15,7 +23,7 @@
 }
 
 .search-box {
-    background-color: hsla(360, 100%, 100%, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     border: none;
     border-radius: 10px;
     outline: none;
