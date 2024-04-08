@@ -43,7 +43,7 @@ const PopularMovieSlide = () => {
 
     return (
         <div>
-            <h3 className='popular-text' style={{ marginTop: 15, marginLeft: 15 }}>Popular Movies</h3>
+            <h3 className='popular-text' style={{ marginTop: 20, marginLeft: 15 }}>Popular Movies</h3>
             <Carousel
                 infinite={true}
                 centerMode={true}
@@ -52,7 +52,7 @@ const PopularMovieSlide = () => {
                 responsive={responsive}
             >
                 {data.results.map((movie, index) => <MovieCard movie={movie} key={index} />)}
-            </Carousel>;
+            </Carousel>
         </div>
     )
 }
