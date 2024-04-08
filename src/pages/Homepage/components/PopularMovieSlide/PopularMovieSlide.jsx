@@ -26,7 +26,7 @@ const PopularMovieSlide = () => {
     const { data, isLoading, isError, error } = usePopularMoviesQuery()
 
     if (isLoading) {
-        return (<div className="loader">
+        return (<div className="loader" tyle={{ margin: 10 }}>
             <BarLoader color="#85C7F2" loading={isLoading} width={150} height={10} />
         </div>
         );
