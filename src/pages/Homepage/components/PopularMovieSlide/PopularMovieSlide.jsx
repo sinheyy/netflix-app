@@ -2,7 +2,7 @@ import React from 'react'
 import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import ClipLoader from "react-spinners/ClipLoader";
+import BarLoader from "react-spinners/BarLoader";
 import Alert from 'react-bootstrap/Alert';
 import "./PopularMovieSlide.style.css"
 import MovieCard from '../MovieCard/MovieCard';
@@ -27,7 +27,7 @@ const PopularMovieSlide = () => {
 
     if (isLoading) {
         return (<div className="loader">
-            <ClipLoader color="#85C7F2" loading={isLoading} size={150} />
+            <BarLoader color="#85C7F2" loading={isLoading} width={150} height={10} />
         </div>
         );
     }

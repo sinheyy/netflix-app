@@ -1,6 +1,6 @@
 import React from 'react'
 import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies'
-import ClipLoader from "react-spinners/ClipLoader";
+import BarLoader from "react-spinners/BarLoader";
 import Alert from 'react-bootstrap/Alert';
 import "./Banner.style.css"
 
@@ -10,7 +10,7 @@ const Banner = () => {
 
     if (isLoading) {
         return (<div className="loader">
-            <ClipLoader color="#85C7F2" loading={isLoading} size={150} />
+            <BarLoader color="#85C7F2" loading={isLoading} width={150} height={10} />
         </div>
         );
     }
