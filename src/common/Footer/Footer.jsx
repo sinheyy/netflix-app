@@ -16,7 +16,7 @@ const Footer = () => {
             </ul>
 
             <div className="footer-text">
-                Gitlab : https://gitlab.com/sinheyyy/netflix-app
+                Github : https://github.com/sinheyy/siya-app
             </div>
             <div className="footer-text">
                 * 비상업적 용도로 제작된 개인 프로젝트 웹사이트 입니다. *
