@@ -1,8 +1,9 @@
-.main {
-    background-color: #2E2E2E;
-    color: white;
-    display: flex;
-    flex-direction: column;
+.review-main {
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .loader {
@@ -11,29 +12,20 @@
 
 }
 
-.button-group {
-    display: flex;
-    justify-content: center;
-}
-
-.button {
-    width: fit-content;
-    border: none;
-    background-color: #85C7F2;
-    color: #2E2E2E;
-    margin: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 1.3rem;
+.data-length {
     font-family: 'SUITE-Regular';
+    font-size: 1rem;
 }
 
-.button:hover {
-    color: white;
-    border-radius: 10px;
-    transition: 0.7s;
+@media only screen and (max-width: 768px) {
+    .review-main {
+            width: 100%;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
 }
-
 
 @font-face {
     font-family: 'SUITE-Regular';

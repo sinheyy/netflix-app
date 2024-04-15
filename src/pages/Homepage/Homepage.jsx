@@ -2,7 +2,7 @@ import React from 'react'
 import './Homepage.style.css';
 import Banner from './components/Banner/Banner';
 import PopularMovieSlide from './components/PopularMovieSlide/PopularMovieSlide';
-import Footer from './components/Footer/Footer';
+import Footer from '../../common/Footer/Footer';
 import TopRatedMovieSlide from './components/TopRatedMovieSlide/TopRatedMovieSlide';
 import UpcomingMovieSlide from './components/UpcomingMovieSlide/UpcomingMovieSlide';
 

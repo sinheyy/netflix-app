@@ -1,0 +1,142 @@
+.loader {
+    display: flex;
+    justify-content: center;
+
+}
+
+.movie-info-section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.movie-poster {
+    width: 400px;
+    height: 500px;
+    background-size: cover;
+    margin-right: 30px;
+}
+
+.movie-info {
+    width: fit-content;
+    font-family: 'SUITE-Regular';
+}
+
+.movie-tagline {
+    font-family: 'SUITE-Regular';
+    font-size: 1.5rem;
+    color: #85C7F2;
+    margin-bottom: 5px;
+}
+
+.movie-title {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.movie-time{
+    font-size: 1.2rem;
+    display: flex;
+}
+
+.movie-adult {
+    margin-bottom: 15px;
+}
+
+.movie-genre {
+    font-family: 'SUITE-Regular';
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.movie-vote {
+    font-family: 'SUITE-Regular';
+    font-size: 1.2rem;
+}
+
+.movie-popularity {
+    font-family: 'SUITE-Regular';
+    font-size: 1.2rem;
+}
+
+.movie-overview {
+    font-family: 'SUITE-Regular';
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.line {
+    border-bottom: 1px solid #85C7F2;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.movie-trailer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: fit-content;
+    font-family: 'SUITE-Regular';
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    padding-left: 2px;
+    font-weight: bold;
+}
+
+.movie-genre {
+    margin-right: 5px;
+}
+
+.modal-content {
+    background-color: #2E2E2E;
+    color: white;
+    font-family: 'SUITE-Regular';
+}
+
+.modal-footer button {
+    background-color: #2E2E2E;
+    color: white;
+    font-family: 'SUITE-Regular';
+}
+
+@media only screen and (max-width: 768px) {
+    .movie-info-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-top: 20px;
+    }
+
+    .movie-poster {
+        width: 350px;
+        height: 500px;
+        margin: 0px;
+    }
+
+    .movie-info{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

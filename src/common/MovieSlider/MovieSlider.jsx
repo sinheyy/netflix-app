@@ -6,7 +6,7 @@ import MovieCard from '../MovieCard/MovieCard';
 const MovieSlider = ({ title, movies, responsive }) => {
     return (
         <div>
-            <h3 className='popular-text' style={{ marginTop: 20, marginLeft: 15 }}>{title}</h3>
+            <h3 className='popular-text' style={{ marginTop: 30, marginLeft: 15 }}>{title}</h3>
             <Carousel
                 infinite={true}
                 centerMode={true}

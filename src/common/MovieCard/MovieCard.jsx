@@ -4,9 +4,11 @@ import './MovieCard.style.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckToSlot, faFireFlameCurved } from '@fortawesome/free-solid-svg-icons'
 import { useMovieGenreQuery } from '../../hooks/useMovieGenre';
+import { useNavigate } from 'react-router-dom';
 
 const MovieCard = ({ movie }) => {
     const { data: genreData } = useMovieGenreQuery()
+    const navigate = useNavigate();
     //console.log("genre", genreData)
 
     // genre id를 받아서 genre를 반환
@@ -22,10 +24,16 @@ const MovieCard = ({ movie }) => {
         return genreNameList
     }
 
+    // 디테일 페이지로 이동
+    const goToDetail = () => {
+        navigate(`/movies/${movie?.id}`);
+    }
+
     return (
         <div
             style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.poster_path})` }}
             className='movie-card'
+            onClick={() => goToDetail()}
         >
             <div className='overlay'>
                 <h1 className='movie-title'>{movie?.title}</h1>
@@ -46,10 +54,10 @@ const MovieCard = ({ movie }) => {
                         {movie?.popularity}</div>
                     <div>{movie?.adult ?
                         <div>
-                            <img width={20} src="https://i.namu.wiki/i/rWtp8mTtCfYIDlgDJIrxHFYzdlng55RKmu5RnPcaiFog74OKaj_UzD_t6ilT1v81abg5Qn7R0acnaZSLfpSg4-uewM098pJU0J4i6-bKubQMJTIg7Qh1I2bEeXbJ3Nus_VMISnXe1D0_fezvcej-Ww.svg"></img>
+                            <img width={20} src="https://i.namu.wiki/i/qRizC1ozMmBsZwUoGhcOpgEChGQTkQ9dt0oF_tqCNrLnAHR80PqKZFGY6OISgeCnIFg0UVUKB54lVJcoGaVt0M0r7cFSn1lNpuBsLIfNmwZ3t1aLXmP9D4UYK3TNQHVQ8BlAhJaSOjMjKN3JfhnByQ.svg"></img>
                         </div> :
                         <div>
-                            <img width={20} src="https://i.namu.wiki/i/8iF56YLQcnTvbdpxqDKufO15dB93g-A-IGPWTo4YYABCpAMqqbrTkGerP3AtsoL-W8V-fN8k-zr4LrDxO1_U8zncvW6BHgfykbtA2u7iAMqXeCJKzjR4tPUr4EdNVRsLzcSnMsIz-SYcNUqz1Sdwxg.svg"></img>
+                            <img width={20} src="https://i.namu.wiki/i/EWsHx_1MsMOI0kRCfuPEG-2ZJDd37YdaNGoaoIfaw9VOIH_B2JvY7eQO-0-JAQVLL12sD6PeNvtbgjwoVGyd4OpoWnZ_yxhta780r_oXZWVe4XaTpXS5-eKj6trxK0KP5iMnPXqNhW__rhTx9L2Rqg.svg"></img>
                         </div>
                     }</div>
                 </div>

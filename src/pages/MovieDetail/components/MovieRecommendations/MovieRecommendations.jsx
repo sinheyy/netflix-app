@@ -1,14 +1,16 @@
 import React from 'react'
-import 'react-multi-carousel/lib/styles.css';
+import { useMovieRecommendationsQuery } from '../../../../hooks/useMovieRecommendations';
 import BarLoader from "react-spinners/BarLoader";
 import Alert from 'react-bootstrap/Alert';
-import "./TopRatedMovieSlide.style.css"
+import { useParams } from 'react-router-dom';
+import "./MovieRecommendations.style.css"
 import MovieSlider from '../../../../common/MovieSlider/MovieSlider';
 import { responsive } from '../../../../constants/responsive';
-import { useTopRatedMoviesQuery } from '../../../../hooks/useTopRatedMovies';
 
-const TopRatedMovieSlide = () => {
-    const { data, isLoading, isError, error } = useTopRatedMoviesQuery()
+const MovieRecommendations = () => {
+    let { id } = useParams();
+    const { data, isLoading, isError, error } = useMovieRecommendationsQuery({ id });
+    console.log("추천", data);
 
     if (isLoading) {
         return (<div className="loader" style={{ margin: 10 }}>
@@ -28,9 +30,9 @@ const TopRatedMovieSlide = () => {
 
     return (
         <div>
-            <MovieSlider title="실패 없는 영화가 보고 싶을 때" movies={data.results} responsive={responsive} />
+            <MovieSlider title="" movies={data} responsive={responsive} />
         </div>
     )
 }
 
-export default TopRatedMovieSlide
+export default MovieRecommendations

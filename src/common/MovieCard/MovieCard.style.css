@@ -1,11 +1,14 @@
 .movie-card {
-    width: 220px;
-    height: 330px;
+    width: 200px;
+    height: 300px;
     background-size: cover;
     cursor: pointer;
     transition: 0.5s;
     font-family: 'Pretendard-Regular';
     text-align: center;
+    border: 2px solid #85C7F2;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 .overlay {
@@ -22,6 +25,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-radius: 10px;
 }
 
 .overlay:hover {
@@ -29,12 +33,12 @@
 }
 
 .movie-card:hover {
-    transform: scale(1.3) translateZ(20px);
+    transform: scale(1.2) translateZ(15px);
     z-index: 2;
 }
 
 .movie-title {
-    font-size: 25px;
+    font-size: 1rem;
     overflow-wrap: break-word;
     font-weight: bold;
     color: white;
@@ -42,7 +46,7 @@
 }
 
 .movie-release {
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .bg-primary {
@@ -56,6 +60,21 @@
 
 .movie-popularity {
     font-size: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    .movie-card {
+        width: 170px;
+        height: 270px;
+        background-size: cover;
+        cursor: pointer;
+        transition: 0.5s;
+        font-family: 'Pretendard-Regular';
+        text-align: center;
+        border: 2px solid #85C7F2;
+        border-radius: 10px;
+        font-size: 1rem;
+    }
 }
 
 @font-face {

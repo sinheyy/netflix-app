@@ -2,3 +2,122 @@
     background-color: #2E2E2E;
     color: white;
 }
+
+.loader {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+}
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#filter-dropdown {
+    margin-right: 10px;
+}
+
+#filter-dropdown button {
+    background-color: transparent;
+    border: none;
+    font-family: 'SUITE-Regular';
+}
+
+#filter-dropdown a {
+    font-family: 'SUITE-Regular';
+}
+
+.cards-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+    row-gap: 10px;
+    column-gap: 10px;
+    place-content: stretch stretch;
+    padding: 0px;
+}
+
+.movie-length {
+    font-family: 'SUITE-Regular';
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+
+
+.pagination {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    >* {
+        cursor: pointer;
+    }
+}
+
+.page-link {
+    transition: all 0.25s;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.3rem;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+.page-link.active-link {
+    background-color: #85C7F2;
+    color: #2E2E2E;
+}
+
+.page-item :hover {
+    background-color: transparent;
+    color: #85C7F2;
+}
+
+.page-link.disabled-link {
+    background-color: transparent;
+    color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    .pagination {
+        width: auto;
+    }
+
+}
+
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
