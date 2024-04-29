@@ -5,6 +5,7 @@ import Alert from 'react-bootstrap/Alert';
 import "./Banner.style.css"
 import { useMovieGenreQuery } from '../../../../hooks/useMovieGenre';
 import Badge from 'react-bootstrap/Badge';
+import BannerVideo from '../BannerVideo/BannerVideo';
 
 const Banner = () => {
     const { data, isLoading, isError, error } = usePopularMoviesQuery()
@@ -49,20 +50,29 @@ const Banner = () => {
             className='banner'
         >
             <div className='banner-text-area'>
-                <h1 className='banner-text-title'>{data?.results[0].title}</h1>
-                <div className='banner-date-genre'>
-                    <div className='banner-date'>{data?.results[0].release_date}</div>
+                <p className='banner-text-overview'>
                     <div>
-                        {showGenre(data?.results[0].genre_ids).map((id) => (
-                            <Badge className='movie-genre'>
-                                {id}
-                            </Badge>
-                        ))}
+                        <h1 className='banner-text-title'>{data?.results[0].title}</h1>
+                        <div className='banner-date-genre'>
+                            <div className='banner-date'>{data?.results[0].release_date}</div>
+                            <div>
+                                {showGenre(data?.results[0].genre_ids).map((id) => (
+                                    <Badge className='movie-genre'>
+                                        {id}
+                                    </Badge>
+                                ))}
+                            </div>
+                        </div>
+                        {data?.results[0].overview}
                     </div>
-                </div>
 
-                <p className='banner-text-overview'>{data?.results[0].overview}</p>
+                    <div className='banner-video'>
+                        <BannerVideo id={data?.results[0].id} />
+                    </div>
+                </p>
             </div>
+
+
         </div>
     )
 }
