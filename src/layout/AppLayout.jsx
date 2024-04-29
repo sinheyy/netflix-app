@@ -39,6 +39,7 @@ const AppLayout = () => {
                         >
                             <Nav.Link onClick={() => navigate("/")}>HOME</Nav.Link>
                             <Nav.Link onClick={() => navigate("/movies")}>MOVIE</Nav.Link>
+                            <Nav.Link onClick={() => navigate("/tvs")}>TV-SHOW</Nav.Link>
 
                         </Nav>
                         <Form className="d-flex" onSubmit={searchByKeyword}>

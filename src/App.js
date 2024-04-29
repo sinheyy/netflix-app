@@ -4,6 +4,8 @@ import AppLayout from './layout/AppLayout';
 import Homepage from './pages/Homepage/Homepage';
 import MoviePage from './pages/Movies/MoviePage';
 import MovieDetailPage from './pages/MovieDetail/MovieDetailPage';
+import TvsPage from './pages/TVs/TvsPage';
+import TvDetailPage from './pages/TvDetail/TvDetailPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 
 // 페이지
@@ -22,6 +24,10 @@ function App() {
           </Route>
           {/* <Route path="/movies" element={<MoviePage />} />
           <Route path="/movies/:id" element={<MovieDetailPage />} /> */}
+          <Route path="tvs">
+            <Route index element={<TvsPage />} />
+            <Route path=":id" element={<TvDetailPage />} />
+          </Route>
         </Route>
 
         <Route path="*" element={<NotFoundPage />} />   {/* 그 외 경로 방문 시 not found로 */}
