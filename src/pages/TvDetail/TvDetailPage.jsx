@@ -36,7 +36,7 @@ const TvDetailPage = () => {
 
   return (
     <div className='main'>
-      <TvInformation movie={data} />
+      <TvInformation tv={data} />
       <div className='button-group'>
         <button className='button' onClick={() => setView(true)}>리뷰</button>
         <button className='button' onClick={() => setView(false)}>추천</button>
