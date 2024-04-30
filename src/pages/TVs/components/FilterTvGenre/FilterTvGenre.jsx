@@ -1,11 +1,11 @@
 import React from 'react'
-import './FilterGenre.style.css';
+import './FilterTvGenre.style.css';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { useMovieGenreQuery } from '../../../hooks/useMovieGenre';
-const FilterGenre = ({ setGenre }) => {
+import { useTvGenreQuery } from '../../../../hooks/useTvGenre';
+const FilterTvGenre = ({ setGenre }) => {
 
-    const { data: genreData } = useMovieGenreQuery()
-    console.log("장르", genreData);
+    const { data: genreData } = useTvGenreQuery()
+    console.log("tv 장르", genreData);
 
     return (
         <div>
@@ -23,4 +23,4 @@ const FilterGenre = ({ setGenre }) => {
     )
 }
 
-export default FilterGenre
+export default FilterTvGenre
