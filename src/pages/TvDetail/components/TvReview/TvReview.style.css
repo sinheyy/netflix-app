@@ -1,41 +1,40 @@
-@import "../../reset.css";
-
-.main {
-    background-color: #2E2E2E;
-    color: white;
-    display: flex;
-    flex-direction: column;
-}
-
-.loader {
-    display: flex;
-    justify-content: center;
-
-}
-
-.button-group {
-    display: flex;
-    justify-content: center;
-}
-
-.button {
-    width: fit-content;
-    border: none;
-    background-color: #85C7F2;
-    color: #2E2E2E;
+.review-card {
+    border: 2px solid #85C7F2;
     margin: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 1.3rem;
+    padding: 10px;
+}
+
+.review-card-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.review-author {
+    font-family: 'Chosunilbo_myungjo';
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.review-content {
+    font-family: 'SUITE-Regular';
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.review-content2 {
     font-family: 'SUITE-Regular';
 }
 
-.button:hover {
-    color: white;
-    border-radius: 10px;
-    transition: 0.7s;
+.fold-button {
+    width: fit-content;
+    border: none;
+    background-color: transparent;
+    color: #85C7F2;
+    font-size: 1rem;
+    font-family: 'SUITE-Regular';
 }
-
 
 @font-face {
     font-family: 'SUITE-Regular';
