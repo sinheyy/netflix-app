@@ -45,7 +45,7 @@ const TvInformation = ({ tv }) => {
     return (
         <div className='tv-info-section'>
             <div className="tv-poster" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${tv?.poster_path})` }}>
-                <div onClick={handleShow} className='tv-trailer'>예고{" "}
+                <div onClick={handleShow} className='tv-trailer'>영상{" "}
                     <FontAwesomeIcon icon={faYoutube} width={30} style={{ color: "#85C7F2" }} />
                 </div>
             </div>
@@ -56,10 +56,10 @@ const TvInformation = ({ tv }) => {
                     <div className='tv-adult' style={{ marginLeft: 5 }}>
                         {tv?.adult ?
                             <div>
-                                <img width={20} src="https://i.namu.wiki/i/rWtp8mTtCfYIDlgDJIrxHFYzdlng55RKmu5RnPcaiFog74OKaj_UzD_t6ilT1v81abg5Qn7R0acnaZSLfpSg4-uewM098pJU0J4i6-bKubQMJTIg7Qh1I2bEeXbJ3Nus_VMISnXe1D0_fezvcej-Ww.svg"></img>
+                                <img width={20} src="/adult_true.png"></img>
                             </div> :
                             <div>
-                                <img width={20} src="https://i.namu.wiki/i/8iF56YLQcnTvbdpxqDKufO15dB93g-A-IGPWTo4YYABCpAMqqbrTkGerP3AtsoL-W8V-fN8k-zr4LrDxO1_U8zncvW6BHgfykbtA2u7iAMqXeCJKzjR4tPUr4EdNVRsLzcSnMsIz-SYcNUqz1Sdwxg.svg"></img>
+                                <img width={20} src="/adult_false.png"></img>
                             </div>
                         }
                     </div>
@@ -81,7 +81,7 @@ const TvInformation = ({ tv }) => {
                 <div className='tv-overview'>{tv?.overview}</div>
                 <div className='line'></div>
                 <div>
-                    가장 최근 방송 정보
+                    최신 에피소드<br/>
                     {tv?.last_episode_to_air.air_date}
                     {tv?.last_episode_to_air.episode_number}
                     {tv?.last_episode_to_air.name}
@@ -93,7 +93,7 @@ const TvInformation = ({ tv }) => {
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>[예고] {tv?.tagline}</Modal.Title>
+                    <Modal.Title>[영상] {tv?.tagline}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <YouTube
