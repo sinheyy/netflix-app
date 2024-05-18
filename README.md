@@ -5,4 +5,4 @@ link : (https://si-ya.netlify.app/)
 <br/>
 <br/>
 ## 1) 시작 화면
-![image](https://github.com/sinheyy/siya-app/assets/163747140/b442c136-915c-4576-9c8e-dbb5101e0490)
+![image](https://github.com/sinheyy/siya-app/assets/163747140/43398372-1805-493e-bd99-b68f1865a963)
