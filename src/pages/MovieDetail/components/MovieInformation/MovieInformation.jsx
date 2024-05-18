@@ -54,10 +54,10 @@ const MovieInformation = ({ movie }) => {
                     <div className='movie-adult' style={{ marginLeft: 5 }}>
                         {movie?.adult ?
                             <div>
-                                <img width={20} src="https://i.namu.wiki/i/rWtp8mTtCfYIDlgDJIrxHFYzdlng55RKmu5RnPcaiFog74OKaj_UzD_t6ilT1v81abg5Qn7R0acnaZSLfpSg4-uewM098pJU0J4i6-bKubQMJTIg7Qh1I2bEeXbJ3Nus_VMISnXe1D0_fezvcej-Ww.svg"></img>
+                                <img width={20} src="/adult_true.png"></img>
                             </div> :
                             <div>
-                                <img width={20} src="https://i.namu.wiki/i/8iF56YLQcnTvbdpxqDKufO15dB93g-A-IGPWTo4YYABCpAMqqbrTkGerP3AtsoL-W8V-fN8k-zr4LrDxO1_U8zncvW6BHgfykbtA2u7iAMqXeCJKzjR4tPUr4EdNVRsLzcSnMsIz-SYcNUqz1Sdwxg.svg"></img>
+                                <img width={20} src="/adult_false.png"></img>
                             </div>
                         }
                     </div>

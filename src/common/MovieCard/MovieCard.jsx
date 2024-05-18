@@ -54,10 +54,10 @@ const MovieCard = ({ movie }) => {
                         {movie?.popularity}</div>
                     <div>{movie?.adult ?
                         <div>
-                            <img width={20} src="https://i.namu.wiki/i/qRizC1ozMmBsZwUoGhcOpgEChGQTkQ9dt0oF_tqCNrLnAHR80PqKZFGY6OISgeCnIFg0UVUKB54lVJcoGaVt0M0r7cFSn1lNpuBsLIfNmwZ3t1aLXmP9D4UYK3TNQHVQ8BlAhJaSOjMjKN3JfhnByQ.svg"></img>
+                            <img width={20} src="/adult_true.png"></img>
                         </div> :
                         <div>
-                            <img width={20} src="https://i.namu.wiki/i/EWsHx_1MsMOI0kRCfuPEG-2ZJDd37YdaNGoaoIfaw9VOIH_B2JvY7eQO-0-JAQVLL12sD6PeNvtbgjwoVGyd4OpoWnZ_yxhta780r_oXZWVe4XaTpXS5-eKj6trxK0KP5iMnPXqNhW__rhTx9L2Rqg.svg"></img>
+                            <img width={20} src="/adult_false.png"></img>
                         </div>
                     }</div>
                 </div>
